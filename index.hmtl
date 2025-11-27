@@ -1,10 +1,125 @@
+<!DOCTYPE html>
 <html lang="en">
- <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="icon" href="res/images/favicon.ico">
- <title>My Dashboard</title>
- </head>
- <body>
- </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="res/images/favicon.ico">
+    <title>My Dashboard</title>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <strong>Welcome to your dashboard!</strong>
+    </header>
+
+    <!-- SECTION 1 : Profile -->
+    <section>
+        <div>
+            <img src="res/images/me.png" width="128" height="128" alt="My picture">
+        </div>
+
+        <div>
+            <ul>
+                <li>Your name</li>
+                <li>01/01/2024</li>
+                <li>Software Engineering</li>
+            </ul>
+        </div>
+
+        <div>
+            <strong>2.65</strong>
+        </div>
+    </section>
+
+    <!-- SECTION 2 : Courses -->
+    <section>
+        <h1>Courses</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Course Title</th>
+                    <th>Semester</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><a href="https://www.atlassian.com/agile" target="_blank">Agile software development</a></td>
+                    <td>fall</td>
+                    <td>82</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td><a href="https://sourcemaking.com/uml" target="_blank">Systems modelling</a></td>
+                    <td>fall</td>
+                    <td>85</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td><a href="https://www.javatpoint.com/software-requirements" target="_blank">Requirements Engineering</a></td>
+                    <td>fall</td>
+                    <td>99</td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td><a href="https://www.interaction-design.org/" target="_blank">Human Computer Interaction</a></td>
+                    <td>fall</td>
+                    <td>65</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="4">End of course list</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <!-- SECTION 3 : Add new course form -->
+    <section>
+        <h1>Add a new course</h1>
+
+        <form>
+
+            <label for="cname">Course Title:</label><br>
+            <input type="text" id="cname" name="cname" required><br><br>
+
+            <label for="sem">Semester:</label><br>
+            <select id="sem" name="sem" required>
+                <option value="fall">Fall</option>
+                <option value="spring">Spring</option>
+            </select><br><br>
+
+            <label for="grade">Grade:</label><br>
+            <input type="number" id="grade" name="grade" min="0" max="100" required><br><br>
+
+            <button type="submit">Add Course</button>
+
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <ul>
+            <li>
+                <a href="https://www.inpt.ac.ma/" target="_blank">moodle</a>
+            </li>
+
+            <li>
+                <a href="https://m.inpt.ac.ma/" target="_blank">Courses</a>
+            </li>
+        </ul>
+    </footer>
+
+</body>
 </html>
