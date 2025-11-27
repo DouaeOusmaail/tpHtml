@@ -83,5 +83,27 @@ supported by
  background-color: #7ebeb6;
  color: #092747;
  }
+/*
+ Applies when the browser's width is 800px wide or wider:
+ */
+@media (min-width: 800px) {
+ .header,
+ .nav {
+ display: flex;
+ }
+ .header {
+ flex-direction: column;
+ align-items: center;
+ }
+}
+ /*
+ Applies when the browser's width is 1000px wide or wider:
+ */
+@media (min-width: 1000px) {
+ .header {
+ flex-direction: row;
+ justify-content: space-between;
+ }
+}
 
 
