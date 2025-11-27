@@ -1,109 +1,101 @@
-{
- font-family: sans-serif;
- box-sizing: border-box;
- /*
- CSS comment
- The box-sizing CSS property sets how the total width and height of an element are
-calculated.
- If you set box-sizing: border-box; on an element, padding, and border are
-included in the width and height:
- */
- }
-body {
- line-height: 1.6;
- margin: 0;
- }
-ul {
- margin: 0;
- padding: 0;
- list-style: none;
- /*
- list-style: none = No marker is shown
- */
- }
-a {
- color: #34495e;
- text-decoration: none;
- /*
- text-decoration: none - is used here to not show underlining under an anchor
-element when a mouse hovers over it.
- Comment it out and check the result on the page.
- */
- }
-.logo {
- margin: 0;
- font-size: 1.1em;
- }
-section {
- padding: 10px 15px;
- margin: 10px;
- display: block;
- /*
- display: block - displays an element as a block element. It starts on a new
-line, and takes up the whole width
- */
-}
-.header {
- padding-top: .5em;
- padding-bottom: .5em;
- border: 1px solid #646174;
- background-color: #a2ccea;
- box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
- /*
- -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
- -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
- -webkit-box-shadow and -moz-box-shadow were browser-specific box-shadow
-implementations for
- WebKit browsers like Google Chrome and Safari, and mozilla firefox. Such prefixes
-are, usually
- used, when a new CSS feature appears and disappears when the feature is fully
-supported by
- the browser.
- In short, concerning Vendor Prefixes (-webkit, -moz, etc.):
- 1- A new CSS feature appears;
- 2- Browsers test the feature;
- 3- Browsers add a prefix to it to allow using it;
- 4- There is no need for the prefix anymore when the feature is fully supported.
- */
- border-radius: 5px;
-}
-.nav {
- margin-top: 5px;
- }
-.nav a {
- padding: 10px 15px;
- text-transform: uppercase;
- text-align: center;
- display: block;
- color: #34495e;
- font-size: .99em;
- }
-/* Pseudo-class selector */
-.nav a:hover {
- background-color: #7ebeb6;
- color: #092747;
- }
-/*
- Applies when the browser's width is 800px wide or wider:
- */
-@media (min-width: 800px) {
- .header,
- .nav {
- display: flex;
- }
- .header {
- flex-direction: column;
- align-items: center;
- }
-}
- /*
- Applies when the browser's width is 1000px wide or wider:
- */
-@media (min-width: 1000px) {
- .header {
- flex-direction: row;
- justify-content: space-between;
- }
+/* Applies to all elements */
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    /*
+    CSS comment
+    The box-sizing CSS property sets how the total width and height of an element are calculated.
+    If you set box-sizing: border-box; on an element, padding and border are included in the width and height.
+    */
 }
 
+body {
+    line-height: 1.6;
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    /*
+    list-style: none = No marker is shown
+    */
+}
+
+a {
+    color: #34495e;
+    text-decoration: none;
+    /*
+    text-decoration: none - removes the underline from links
+    */
+}
+
+.logo {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+section {
+    padding: 10px 15px;
+    margin: 10px;
+    display: block;
+    /*
+    display: block: element starts on a new line and takes the full width
+    */
+}
+
+.header {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border: 1px solid #646174;
+    background-color: #a2ccea;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+
+    border-radius: 5px;
+}
+
+.nav {
+    margin-top: 5px;
+}
+
+.nav a {
+    padding: 10px 15px;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    color: #34495e;
+    font-size: 0.99em;
+}
+
+/* Pseudo-class selector */
+.nav a:hover {
+    background-color: #7ebeb6;
+    color: #092747;
+}
+
+/*
+Applies when the browser's width is 800px wide or wider
+*/
+@media (min-width: 800px) {
+    .header,
+    .nav {
+        display: flex;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/*
+Applies when the browser's width is 1000px wide or wider
+*/
+@media (min-width: 1000px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
 
